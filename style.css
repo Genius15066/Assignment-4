@@ -12,6 +12,7 @@ body{
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    height: 100vh;
 }
 nav{
     height: 50px;
@@ -20,7 +21,6 @@ nav{
 }
 .container{
     width: 1200px;
-    max-width: 85%;
     margin: 0 auto;
 }
 nav ul{
