@@ -51,6 +51,8 @@ document.getElementById('book-now').addEventListener('click', function () {
     document.getElementById('booking-form').style.display = "none";
     document.getElementById('booking-confirmation').style.display = "block";
 
+    document.getElementById('date-time').innerText=Date();
+
     document.getElementById('f-class-seat-amount').innerText=SeatClassCount('first-class');
     document.getElementById('e-class-seat-amount').innerText=SeatClassCount('economy-class');
 
