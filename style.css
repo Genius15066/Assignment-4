@@ -149,5 +149,6 @@ nav ul li a:hover, a.active{
     margin-left:25%;
     font-size:18px;
     display:none; 
+    font-weight: 400;
 }
 
