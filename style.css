@@ -133,7 +133,7 @@ nav ul li a:hover, a.active{
     justify-content: center;
     background: linear-gradient(to right,rgb(225, 225, 235),rgb(206, 195, 195));  
     padding: 40px;
-    margin-top: 50px;
+    margin:50px;
     border-radius:10px;  
     text-align: center;
 }
