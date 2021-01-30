@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
+    <!--bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,7 +34,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main class="main-content container" id="booking-form">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
@@ -54,7 +57,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                        <input class="inp-style" type="date"  name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -67,19 +70,23 @@
                     <input id="first-class" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button id="first-increase" class="plus-minus-btn" onclick="ticketNumberChange(true,'first-class')"><i class="fas fa-plus"></i></button>
-                    <button id="first-decrease" class="plus-minus-btn minus-btn" onclick="ticketNumberChange(false,'first-class')"><i class="fas fa-minus"></i></button>
+                    <button class="plus-minus-btn" onclick="ticketNumberChange(true,'first-class')"><i
+                            class="fas fa-plus"></i></button>
+                    <button class="plus-minus-btn minus-btn" onclick="ticketNumberChange(false,'first-class')"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
 
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id="economy" class="inp-style inp-width" type="number" name=""  value="0">
+                    <input id="economy-class" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button id="economy-increase" class="plus-minus-btn" onclick="ticketNumberChange(true,'economy')"><i class="fas fa-plus"></i></button>
-                    <button id="economy-decrease" class="plus-minus-btn minus-btn" onclick="ticketNumberChange(false,'economy')"><i class="fas fa-minus"></i></button>
+                    <button class="plus-minus-btn" onclick="ticketNumberChange(true,'economy-class')"><i
+                            class="fas fa-plus"></i></button>
+                    <button class="plus-minus-btn minus-btn" onclick="ticketNumberChange(false,'economy-class')"><i
+                            class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -110,9 +117,39 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style" id="book-now">Book Now</button>
         </div>
     </main>
+    <!-- booking-section end -->
+
+    <!-- booking-complete section starts -->
+    <div id="booking-done" class="booking-info">
+        <p style="font-size: 100px; color: green;"> <i class="fas fa-check-circle"></i></p>
+        <p style="font-size: 35px;font-weight: bold;">Successfully Done</p>
+        <h2 style="color: orangered;font-size: 30px;">Congratulations</h2>
+        <div class="message" style="font-size: 20px;">
+            <p>Your ticket has been booked</p>
+            <p style="font-weight: bolder;color: rgb(0, 41, 128)">Have a safe Journey.</p>
+            <p style="color: rgb(0, 128, 0);font-weight: bolder;">Thanks for choosing us.</p>
+        </div>
+    </div>
+
+    <!-- booking-complete section end -->
+
+    <!-- booking-confirmation section starts -->
+    <div id="booking-confirmation" class="booking-info">
+        <h1 style="margin-bottom:35px; color:rgb(53, 44, 92)">Ticket Confirmation</h1>
+        <p>From: Dhaka, Bangladesh</p>
+        <p>To: New York, United States </p>
+        <p style="margin-bottom:30px;">Date: January 31,2021 8:00pm</p>
+        <p>First-Class seat : <span id="f-class-seat-amount"></span></p>
+        <p style="margin-bottom:30px;">Economy-Class seat : <span id="e-class-seat-amount"></span></p>
+        <p>Subtotal Fare: <span id="subtotal-fare"></span></p>
+        <p>Tax: <span id="ticket-tax"></span></p>
+        <p style="margin-bottom:35px; font-weight: bolder;">Total Fare: <span id="total-fare"></span></p>
+        <button type="submit" id="confirm-btn" class="btn btn-lg btn-primary">Confirm</button>
+    </div>
+    <!-- booking-confirmation section end-->
 
     <script src="script.js"></script>
 

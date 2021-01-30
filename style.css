@@ -128,3 +128,26 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+
+.booking-info{ 
+    justify-content: center;
+    background: linear-gradient(to right,rgb(225, 225, 235),rgb(206, 195, 195));  
+    padding: 40px;
+    margin-top: 50px;
+    border-radius:10px;  
+    text-align: center;
+}
+
+#booking-done{
+    display:none; 
+    line-height: 2;
+    width:80%;
+    margin-left:10%;
+}
+#booking-confirmation{  
+    width:50%;
+    margin-left:25%;
+    font-size:18px;
+    display:none; 
+}
+
